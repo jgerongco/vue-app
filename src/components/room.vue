@@ -1,12 +1,33 @@
-<!-- src/components/ReservationSystem.vue -->
 <template>
-  <div class="reservation-system">
-    <h2>Reservation System</h2>
-    <div v-for="slot in timeSlots" :key="slot.id" class="time-slot" :class="{ 'reserved': slot.reserved }">
-      <span>{{ slot.time }}</span>
-      <button v-if="!slot.reserved" @click="reserveRoom(slot)">Reserve</button>
-      <span v-else class="reserved">Reserved</span>
+  <div class="reservation-schedule">
+    <div class="table-header">
+      <h2>Reservation Schedule</h2>
+      <p class="current-date">{{ currentDate }}</p>
     </div>
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Time Slot</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="slot in timeSlots" :key="slot.id">
+          <td>{{ slot.time }}</td>
+          <td :class="{ 'available': slot.status === 'Available', 'reserved': slot.status === 'Reserved' }">{{ slot.status }}</td>
+          <td>
+            <router-link :to="{ path: 'reservationform', params: { timeSlot: slot.time } }">
+              <button v-if="slot.status === 'Available'" class="reserve-btn">Reserve</button>
+              <button v-else-if="slot.status === 'Reserved'" class="reserved-btn" disabled>
+                Reserved
+              </button>
+              <button v-else disabled class="unavailable-btn">Unavailable</button>
+            </router-link>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -15,64 +36,80 @@ export default {
   data() {
     return {
       timeSlots: [
-        { id: 1, time: '8:00 - 10:00 am', reserved: false },
-        { id: 2, time: '10:00 - 12:00 nn', reserved: false },
-        { id: 3, time: '1:00 - 3:00 pm', reserved: false },
-        { id: 4, time: '3:00 - 5:00 pm', reserved: false },
+        { id: 1, time: '8am - 10am', status: 'Available' },
+        { id: 2, time: '10am - 12pm', status: 'Available' },
+        { id: 3, time: '1pm - 3pm', status: 'Reserved' },
+        { id: 4, time: '3pm - 5pm', status: 'Available' },
+        // Add more time slots as needed
       ],
+      currentDate: new Date().toLocaleDateString(),
     };
-  },
-  methods: {
-    reserveRoom(slot) {
-      // Implement room reservation logic here
-      if (!slot.reserved) {
-        // Reserve the room
-        slot.reserved = true;
-        console.log('Room reserved for', slot.time);
-      } else {
-        console.log('Room already reserved for', slot.time);
-      }
-    },
   },
 };
 </script>
 
 <style scoped>
-/* Add your component-specific styles here */
-.reservation-system {
-  background: linear-gradient(180deg, #7AC8FF 0%, #C2E1FF 100%);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.reservation-schedule {
+  max-width: 800px;
+  margin: auto;
 }
 
-.time-slot {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
+.table-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.current-date {
+  font-size: 14px;
+  color: #888;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #3498db; /* Blue color for header */
+  color: white;
+}
+
+.available {
+  background-color: #dff0d8; /* Green background for available status */
+  color: #4caf50; /* Green color for text */
 }
 
 .reserved {
-  color: red;
-  font-weight: bold;
+  background-color: #f9f4b6; /* Yellow background for reserved status */
+  color: #f39c12; /* Orange color for text */
 }
 
-button {
-  padding: 8px 12px;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+.reserve-btn, .reserved-btn, .unavailable-btn {
+  padding: 8px 16px;
   cursor: pointer;
+  font-size: 14px;
 }
 
-button:disabled {
-  background-color: #ccc;
+.reserve-btn {
+  background-color: #4caf50; /* Green color for reserve button */
+  color: white;
+}
+
+.reserved-btn, .unavailable-btn {
   cursor: not-allowed;
+}
+
+.reserved-btn:disabled, .unavailable-btn:disabled {
+  background-color: #ddd; /* Grey color for disabled buttons */
+  color: #888;
 }
 </style>
