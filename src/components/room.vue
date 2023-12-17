@@ -1,5 +1,7 @@
 <template>
+  <div class="background">
   <div class="reservation-schedule">
+    <div class="room-container">
     <div class="table-header">
       <h2>Reservation Schedule</h2>
       <p class="current-date">{{ currentDate }}</p>
@@ -29,6 +31,8 @@
       </tbody>
     </table>
   </div>
+  </div>
+</div>
 </template>
 
 <script>
@@ -49,6 +53,18 @@ export default {
 </script>
 
 <style scoped>
+.background {
+  background: rgba(217, 217, 217, 0.1);
+}
+.room-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(217, 217, 217, 0.9);
+  }
 .reservation-schedule {
   max-width: 800px;
   margin: auto;
@@ -59,12 +75,17 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  text-align: center;
+  
+}
+
+h2 {
+  color: #901430;
+  margin: 0;
 }
 
 .current-date {
   font-size: 14px;
-  color: #888;
+  color: #901430;
 }
 
 .schedule-table {
@@ -75,41 +96,65 @@ export default {
 th, td {
   border: 1px solid #ddd;
   padding: 12px;
-  text-align: left;
+  text-align: center;
 }
 
 th {
-  background-color: #3498db; /* Blue color for header */
-  color: white;
+  background-color: #fd9da1;
+  color: #ffffff;
 }
 
 .available {
-  background-color: #dff0d8; /* Green background for available status */
-  color: #4caf50; /* Green color for text */
+  background-color: #f5bfc1;
+  color: #901430;
 }
 
 .reserved {
-  background-color: #f9f4b6; /* Yellow background for reserved status */
-  color: #f39c12; /* Orange color for text */
+  background-color: #ffff;
+  color: #fd9da1;
 }
 
 .reserve-btn, .reserved-btn, .unavailable-btn {
   padding: 8px 16px;
   cursor: pointer;
   font-size: 14px;
+  border: none;
 }
 
 .reserve-btn {
-  background-color: #4caf50; /* Green color for reserve button */
-  color: white;
+  background-color: #901430;
+  color: #ffffff;
 }
 
-.reserved-btn, .unavailable-btn {
+.reserve-btn:hover {
+  opacity: 0.8;
+}
+
+.reserved-btn {
+  background-color: #ffff;
+  color: #fd9da1;
+}
+
+.reserved-btn:disabled {
   cursor: not-allowed;
+  opacity: 0.5;
 }
 
-.reserved-btn:disabled, .unavailable-btn:disabled {
-  background-color: #ddd; /* Grey color for disabled buttons */
-  color: #888;
+.unavailable-btn {
+  background-color: #f5bfc1;
+  color: #901430;
+}
+
+.unavailable-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 </style>

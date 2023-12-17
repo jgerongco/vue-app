@@ -28,12 +28,12 @@
   
             <div class="form-group">
               <label for="userID">User ID:</label>
-              <input v-model="reservation.numberOfPeople" type="text" id="userID" required>
+              <input v-model="reservation.uicId" type="text" id="userID" required>
             </div>
 
             <div class="form-group">
               <label for="faculty-in-charge">Faculty In Charge:</label>
-              <input v-model="reservation.numberOfPeople" type="text" id="faculty-in-charge" required>
+              <input v-model="reservation.facultyIncharge" type="text" id="faculty-in-charge" required>
             </div>
   
             <div class="form-group">
@@ -156,4 +156,3 @@
         color: #fff;
     }
   </style>
-  

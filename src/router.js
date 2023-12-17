@@ -8,6 +8,7 @@ import HomePage from './components/HomePage.vue';
 import ReservationForm from './components/reservationform.vue';
 import Room from './components/room.vue';
 import Profile from './components/profile.vue';
+import Notification from './components/notification.vue';
 
 
 const routes = [
@@ -19,6 +20,7 @@ const routes = [
       { path: "/reservationform", component: ReservationForm },
       { path: "/room", component: Room },
       { path: "/profile", component: Profile },
+      { path: "/notification", component: Notification },
     ];
 const router = createRouter({
   history: createWebHistory(),
