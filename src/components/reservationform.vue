@@ -9,7 +9,7 @@
   
       <main>
         <section class="form-container">
-          <h2>Reservation Form</h2>
+          <h2 class>Reservation Form</h2>
           <form @submit.prevent="submitForm">
             <div class="form-group">
               <label for="firstName">FIRST NAME:</label>
@@ -26,11 +26,19 @@
               <input v-model="reservation.email" type="email" id="email" required>
             </div>
   
-            <!-- Add more form fields as needed -->
+            <div class="form-group">
+              <label for="userID">User ID:</label>
+              <input v-model="reservation.numberOfPeople" type="text" id="userID" required>
+            </div>
+
+            <div class="form-group">
+              <label for="faculty-in-charge">Faculty In Charge:</label>
+              <input v-model="reservation.numberOfPeople" type="text" id="faculty-in-charge" required>
+            </div>
   
             <div class="form-group">
               <label for="numberOfPeople">Number of People:</label>
-              <input v-model="reservation.numberOfPeople" type="number" id="numberOfPeople" required>
+              <input v-model="reservation.numberOfPeople" type="text" id="numberOfPeople" required>
             </div>
   
             <div class="form-group">
