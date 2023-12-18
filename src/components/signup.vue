@@ -28,7 +28,7 @@
       <router-link to = "/login"><button type="submit">SIGN UP</button></router-link>
     </form>
     <div class="signup-link">
-          <router-link to='./login'>Already have an account? <a href="./login">Login here</a></router-link> 
+          <router-link to='./'>Already have an account? <a href="./">Login here</a></router-link> 
         </div>
   </div>
 </div>
@@ -56,7 +56,7 @@ export default {
 
 <style scoped>
 .sign-background {
-  background: url('C:\My Files\ccs\webdev1\System\vue-app\src\pictures\NIY_03551.jpg') center center/cover;
+  background: url('C:\My Files\ccs\webdev1\vue-app\src\pictures\NIY_03551.jpg') center center/cover;
   height: 98vh; /* Adjust the height as needed */
   display: flex;
   align-items: center;

@@ -33,7 +33,7 @@
   
   <style scoped>
   .forgot-password-background {
-    background: url('C:\Users\User\Downloads\vue-app\src\pictures\NIY_03551.jpg') center center/cover;
+    background: url('C:\My Files\ccs\webdev1\vue-app\src\pictures\NIY_03551.jpg') center center/cover;
     height: 98vh;
     display: flex;
     align-items: center;

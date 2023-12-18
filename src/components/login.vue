@@ -20,7 +20,7 @@
           <router-link to = "/forgotpassword">Forgot Password?</router-link>
         </div>
         <div class="signup-link">
-          <router-link to="/room">Don't have an account? Sign up here</router-link> 
+          <router-link to="/signup">Don't have an account? Sign up here</router-link> 
         </div>
         </form>
         </div>
@@ -87,7 +87,7 @@
   }
 
 .background {
-  background: url('C:\Users\User\Downloads\vue-app\src\pictures\NIY_03551.jpg') center center/cover;
+  background: url('C:\My Files\ccs\webdev1\vue-app\src\pictures\NIY_03551.jpg') center center/cover;
   height: 98vh; /* Adjust the height as needed */
   display: flex;
   align-items: center;
@@ -95,10 +95,10 @@
 }
 
 .login-container {
-  width: 450px;
+  width: 400px;
   padding: 40px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background: rgba(217, 217, 217, 0.9);
   display: flex;
