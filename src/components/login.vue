@@ -48,7 +48,7 @@
   
   <style scoped>
   .login-container {
-    max-width: 400px;
+    max-width: 450px;
     margin: auto;
     padding: 1px;
     border: 1px solid #ccc;
@@ -59,6 +59,8 @@
   .login-form {
     display: flex;
     flex-direction: column;
+    align-items: left;
+    grid-template-columns: 1fr 1fr;
   }
   
   label {
@@ -92,6 +94,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .login-container {
