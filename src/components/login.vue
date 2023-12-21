@@ -3,7 +3,7 @@
     <div class="login-container">
       <h2 class="login-heading">Login</h2>
         <div class="logo-container">
-        <img src="./pictures/ictdu.png" alt="Logo" class="logo">
+        <!-- <img src="/pictures/ictdu.png" alt="Logo" class="logo"> -->
         </div>
         <div class="form-container">
         
