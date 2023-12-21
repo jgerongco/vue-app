@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Login from './components/login.vue';
 import Signup from './components/signup.vue';
 import ForgotPassword from './components/forgotpassword.vue';
-import ForgotPasswordCode from './components/ForgotPasswordCode.vue';
+import ForgotPasswordCode from './components/forgotpasswordcode.vue';
 import HomePage from './components/HomePage.vue';
 import ReservationForm from './components/reservationform.vue';
 import Room from './components/room.vue';
