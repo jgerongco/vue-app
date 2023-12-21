@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div class="app">
       <div class="header">
         <h1>NOTIFICATION </h1>
         <div>
@@ -59,35 +59,71 @@
   };
   </script>
   
-  <style>
-  .app {
-    text-align: center;
-    margin: 20px;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .notifications {
-    margin-top: 20px;
-  }
-  
-  .footer {
-    margin-top: 40px;
-  }
-  
-  .footer ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .footer li {
-    cursor: pointer;
-  }
-  </style>
+  <style scoped>
+.app {
+  text-align: center;
+  margin: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fd9da1;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.header h1 {
+  color: #ffffff;
+}
+
+.header div {
+  display: flex;
+  align-items: center;
+}
+
+.header button,
+.header select {
+  background-color: #f5bfc1;
+  color: #901430;
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.notifications {
+  margin-top: 20px;
+}
+
+.notifications div {
+  background-color: #f5bfc1;
+  color: #901430;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.footer {
+  margin-top: 40px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fd9da1;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.footer li {
+  cursor: pointer;
+  color: #ffffff;
+}
+</style>
+
   
