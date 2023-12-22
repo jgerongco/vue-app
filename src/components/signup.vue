@@ -56,7 +56,7 @@ export default {
 
 <style scoped>
 .sign-background {
-  background-image: url('./NIY_03551.jpg') center center/cover;
+  background: url('./NIY_03551.jpg') center center/cover;
   height: 98vh; /* Adjust the height as needed */
   display: flex;
   align-items: center;
@@ -103,6 +103,7 @@ button {
   border-radius: 3px;
   cursor: pointer;
   margin-bottom: 10px;
+  float: right;
 }
 
 button:hover {
