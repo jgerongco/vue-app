@@ -3,7 +3,7 @@
     <div class="login-container">
       <h2 class="login-heading">Login</h2>
         <div class="logo-container">
-        <!-- <img src="/pictures/ictdu.png" alt="Logo" class="logo"> -->
+        <img src='./UIC.png' alt="Logo" class="logo">
         </div>
         <div class="form-container">
         
@@ -89,7 +89,10 @@
   }
 
 .background {
-  background: url('C:\My Files\ccs\webdev1\vue-app\src\pictures\NIY_03551.jpg') center center/cover;
+  background-image: url('./NIY_03551.jpg');
+  background: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 98vh; /* Adjust the height as needed */
   display: flex;
   align-items: center;

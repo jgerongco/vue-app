@@ -35,7 +35,7 @@
   
   <style scoped>
   .forgot-password-alt-background {
-    background: url('C:\My Files\ccs\webdev1\vue-app\src\pictures\NIY_03551.jpg') center center/cover;
+    background-image: url('./NIY_03551.jpg');
     height: 98vh;
     display: flex;
     align-items: center;
