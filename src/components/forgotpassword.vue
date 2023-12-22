@@ -8,8 +8,10 @@
         <form @submit.prevent="resetPassword">
           <label for="email">Email:</label>
           <input type="email" v-model="email" required />
-          <button type="submit">SUBMIT</button>
+          
         </form>
+        <router-link to = "/"><button type = "submit">CANCEL</button></router-link>
+        <router-link to = "/forgotpasswordcode"><button type="submit">SUBMIT</button></router-link>
       </div>
     </div>
   </template>
@@ -71,6 +73,10 @@
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    margin-bottom: 5px;
+    float: right;
+    margin-right: 5px;
+    margin-top: 10px;
   }
   
   button:hover {

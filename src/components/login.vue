@@ -2,9 +2,9 @@
     <div class="background">
     <div class="login-container">
       <h2 class="login-heading">Login</h2>
-        <div class="logo-container">
-        <img src='./UIC.png' alt="Logo" class="logo">
-        </div>
+          <!-- <div class="logo-container">
+          <img src='./UIC.png' alt="Logo" class="logo">
+          </div> -->
         <div class="form-container">
         
         <form @submit.prevent="login" class="login-form">

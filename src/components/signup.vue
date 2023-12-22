@@ -25,11 +25,13 @@
       <label for="confirmPassword">Confirm Password:</label>
       <input type="password" v-model="confirmPassword" required />
 
-      <router-link to = "/login"><button type="submit">SIGN UP</button></router-link>
     </form>
+    <router-link to = "/"><button type="submit">CANCEL</button></router-link>
+      <router-link to = "/homepage"><button type="submit">SIGN UP</button></router-link>
     <div class="signup-link">
-          <router-link to='./'>Already have an account? <a href="./">Login here</a></router-link> 
+          <router-link to="./">Already have an account? <a href="./">Login here</a></router-link> 
         </div>
+        
   </div>
 </div>
 </template>
@@ -104,11 +106,17 @@ button {
   cursor: pointer;
   margin-bottom: 10px;
   float: right;
+  margin-right: 10px;
 }
 
 button:hover {
   background-color: #e62b4d;
 }
-
+.signup-link
+{
+  text-align: center;
+  margin-top: 50px;
+  
+}
 
 </style>
