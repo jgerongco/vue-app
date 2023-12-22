@@ -46,9 +46,9 @@
     width: 400px;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(217, 217, 217, 0.9);
   }
   
   form {

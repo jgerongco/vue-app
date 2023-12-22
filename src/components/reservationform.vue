@@ -4,15 +4,15 @@
     <div class="background">
     <div id="app">
       <header>
-        <h1 class="ICTDU-heading">Reservation System</h1>
+        <h1 class="ICTDU-heading"></h1>
       </header>
   
       <main>
         <section class="form-container">
-          <h2 class>Reservation Form</h2>
+          <h2 class="ICTDU-heading">Reservation Form</h2>
           <form @submit.prevent="submitForm">
             <div class="form-group">
-              <label for="firstName">FIRST NAME:</label>
+              <label for="firstName">First Name:</label>
               <input v-model="reservation.firstName" type="text" id="firstName" required>
             </div>
   
@@ -51,13 +51,13 @@
               <textarea v-model="reservation.purpose" id="purpose" rows="4" required></textarea>
             </div>
   
-            <button type="submit">Submit</button>
+            <button type="submit">SUBMIT</button>
           </form>
         </section>
       </main>
   
       <footer>
-        <p>&copy; UIC ICTDU Reservation 2023</p>
+        <!-- <p>&copy; UIC ICTDU Reservation 2023</p> -->
       </footer>
     </div>
 </div>
@@ -111,12 +111,14 @@
     .form-group {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-gap: 10px;
+      grid-gap: 1px;
       margin-bottom: 15px;
       font-style: Saira Condensed;
       font-size: 18px;
       font-weight: bold;
       color:#901430;
+      margin-left: 20px;
+      margin-right: 20px;
     }
   
     /* Style the form fields within a form group */
@@ -141,18 +143,26 @@
       border: none;
       border-radius: 3px;
       cursor: pointer;
+      float: right;
     }
   
     button:hover {
       background-color: #e62b4d;
     }
     .background{
-        background-color: #e47676;
+      background-image: url('./NIY_03551.jpg');
+      background: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 98vh; /* Adjust the height as needed */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .ICTDU-heading{
         text-align: center;
-        margin-top: auto;
-        margin-block-end: auto;
-        color: #fff;
+        margin-top: 10px;
+        margin-block-end: 20px;
+        color: #000000;
     }
   </style>

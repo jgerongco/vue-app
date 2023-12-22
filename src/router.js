@@ -9,7 +9,8 @@ import ReservationForm from './components/reservationform.vue';
 import Room from './components/room.vue';
 import Profile from './components/profile.vue';
 import Notification from './components/notification.vue';
-
+// import Header from './components/header.vue';
+// import Footer from './components/footer.vue';
 
 const routes = [
       { path: "/", component: Login },
@@ -21,6 +22,8 @@ const routes = [
       { path: "/room", component: Room },
       { path: "/profile", component: Profile },
       { path: "/notification", component: Notification },
+      // { path: "/header", component: Header },
+      // { path: "/footer", component: Footer },
     ];
 const router = createRouter({
   history: createWebHistory(),
