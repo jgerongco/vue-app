@@ -1,129 +1,155 @@
 <template>
-    <div class="app">
-      <div class="header">
-        <h1>NOTIFICATION </h1>
-        <div>
-          <button @click="filterNotifications('all')">All</button>
-          <button @click="filterNotifications('updates')">Updates</button>
-          <button @click="filterNotifications('trash')">Trash</button>
-          <select v-model="selectedFilter">
-            <option value="all">All</option>
-            <option value="updates">Updates</option>
-            <option value="trash">Trash</option>
-          </select>
-        </div>
+  <div id="app" class="background-container">
+    <div class="container">
+      <div class="notification-header">
+        <button @click="changeTab('all')" :class="{ 'active-tab': activeTab === 'all' }">All</button>
+        <button @click="changeTab('updates')" :class="{ 'active-tab': activeTab === 'updates' }">Updates</button>
+        <button @click="changeTab('trash')" :class="{ 'active-tab': activeTab === 'trash' }">Trash</button>
       </div>
-  
-      <div class="notifications">
-        <div v-for="notification in filteredNotifications" :key="notification.id">
-          {{ notification.text }}
-        </div>
+
+      <div v-if="activeTab === 'all'">
+        <h2>All Notifications</h2>
+        <table class="notification-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Notification Text</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="notification in filteredNotifications('all')" :key="notification.id">
+              <td>{{ notification.id }}</td>
+              <td>{{ notification.text }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-  
-      <div class="footer">
-        <ul>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Socials</li>
-        </ul>
+
+      <div v-else-if="activeTab === 'updates'">
+        <h2>Update Notifications</h2>
+        <table class="notification-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Notification Text</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="notification in filteredNotifications('updates')" :key="notification.id">
+              <td>{{ notification.id }}</td>
+              <td>{{ notification.text }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div v-else-if="activeTab === 'trash'">
+        <h2>Trash Notifications</h2>
+        <table class="notification-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Notification Text</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="notification in filteredNotifications('trash')" :key="notification.id">
+              <td>{{ notification.id }}</td>
+              <td>{{ notification.text }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        notifications: [
-          { id: 1, text: 'Notification 1', type: 'all' },
-          { id: 2, text: 'Notification 2', type: 'updates' },
-          { id: 3, text: 'Notification 3', type: 'trash' },
-          // Add more notifications as needed
-        ],
-        selectedFilter: 'all',
-      };
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      activeTab: 'all',
+      notifications: [
+        { id: 1, text: 'Notification 1', type: 'all' },
+        { id: 2, text: 'Notification 2', type: 'updates' },
+        { id: 3, text: 'Notification 3', type: 'trash' },
+        // Add more notifications as needed
+      ],
+    };
+  },
+  computed: {
+    filteredNotifications() {
+      return (type) => this.notifications.filter(
+        (notification) => type === 'all' || notification.type === type
+      );
     },
-    computed: {
-      filteredNotifications() {
-        return this.notifications.filter(
-          (notification) =>
-            this.selectedFilter === 'all' || notification.type === this.selectedFilter
-        );
-      },
+  },
+  methods: {
+    changeTab(tab) {
+      this.activeTab = tab;
     },
-    methods: {
-      filterNotifications(type) {
-        this.selectedFilter = type;
-      },
-    },
-  };
-  </script>
-  
-  <style scoped>
-.app {
-  text-align: center;
-  margin: 20px;
+  },
+};
+</script>
+
+<style scoped>
+.background-container {
+  background: url('./NIY_03551.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fd9da1;
-  padding: 10px;
+.container {
+  max-width: 2000px;
+  width: 800px;
+  margin: 0 auto;
+  background: rgba(217, 217, 217, 0.9); /* Adjust the opacity as needed */
+  padding: 100px;
   border-radius: 8px;
 }
 
-.header h1 {
-  color: #ffffff;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #000000;
 }
 
-.header div {
+.notification-header {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.header button,
-.header select {
-  background-color: #f5bfc1;
-  color: #901430;
-  margin: 0 5px;
-  padding: 8px 12px;
+button {
+  background-color: #F68B9E;
+  color: white;
   border: none;
-  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 0 5px;
   cursor: pointer;
+  outline: none;
 }
 
-.notifications {
+.active-tab {
+  background-color: #e62b4d;
+}
+
+.notification-table {
+  width: 100%;
+  border-collapse: collapse;
   margin-top: 20px;
 }
 
-.notifications div {
-  background-color: #f5bfc1;
-  color: #901430;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 4px;
+.notification-table th, .notification-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
 }
 
-.footer {
-  margin-top: 40px;
-}
-
-.footer ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  background-color: #fd9da1;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.footer li {
-  cursor: pointer;
-  color: #ffffff;
+.notification-table th {
+  background-color: #F68B9E;
+  color: white;
+  text-align: center;
 }
 </style>
-
-  
