@@ -54,19 +54,24 @@ export default {
 
 <style scoped>
 .background {
-  background: rgba(217, 217, 217, 0.1);
+  background-image: url('./NIY_03551.jpg');
+  background: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 98vh; /* Adjust the height as needed */
+  display: flex;
 }
 .room-container {
-    max-width: 1000px;
-    margin: auto;
+    max-width: 2000px;
+    margin: 10px;
     padding: 50px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 50px solid #ccc;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
     background: rgba(217, 217, 217, 0.9);
   }
 .reservation-schedule {
-  max-width: 800px;
+  max-width: 2000px;
   margin: auto;
 }
 
@@ -84,12 +89,12 @@ h2 {
 }
 
 .current-date {
-  font-size: 14px;
+  font-size: 20px;
   color: #901430;
 }
 
 .schedule-table {
-  width: 100%;
+  width: 800px;
   border-collapse: collapse;
 }
 

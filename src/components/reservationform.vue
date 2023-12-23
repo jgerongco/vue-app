@@ -2,7 +2,7 @@
 
 <template>
     <div class="background">
-    <div id="app">
+    <div>
       <header>
         <h1 class="ICTDU-heading"></h1>
       </header>

@@ -32,8 +32,9 @@
     scroll-behavior: smooth;
 }
 nav {
-  background-color: #3498db;
+  background-color: #ffffff;
   padding: 10px 20px;
+  font-weight: 20px;
 }
 
 .nav-container {
