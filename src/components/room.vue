@@ -127,7 +127,7 @@ th {
 }
 
 .reserve-btn {
-  background-color: #901430;
+  background-color: #e62b4d;
   color: #ffffff;
 }
 
@@ -147,7 +147,7 @@ th {
 
 .unavailable-btn {
   background-color: #f5bfc1;
-  color: #901430;
+  color: #e62b4d;
 }
 
 .unavailable-btn:disabled {

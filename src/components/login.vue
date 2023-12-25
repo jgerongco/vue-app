@@ -14,7 +14,7 @@
         <label for="password">Password:</label>
         <input type="password" v-model="password" required />
 
-        <button type="button" class="btn btn-danger">LOGIN</button>
+        <router-link to="/homepage"><button type="button" class="btn btn-danger">LOGIN</button></router-link>
         <div class="space"></div>
         <div class="forgot-password">
           <router-link to = "/forgotpassword">Forgot Password?</router-link>
@@ -75,17 +75,18 @@
   }
   
   button {
-    background-color: #F68B9E;
+    background-color: #e62b4d;
     color: white;
     padding: 10px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
-   
+    float: right;
+    margin-right: 15px;
   }
   
   button:hover {
-    background-color: #e62b4d;
+    background-color: #F68B9E;
   }
 
 .background {

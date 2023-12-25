@@ -1,9 +1,19 @@
+<!-- ReservationForm.vue -->
+
 <template>
     <div class="background">
+    <div>
+  
       <main>
         <section class="form-container">
-          <h2 class="ICTDU-heading">Reservation Form</h2>
+          <h2 class="ICTDU-heading">Report</h2>
           <form @submit.prevent="submitForm">
+
+            <div class="form-group">
+              <label for="userID">Student ID:</label>
+              <input v-model="reservation.uicId" type="text" id="userID" required>
+            </div>
+            
             <div class="form-group">
               <label for="firstName">First Name:</label>
               <input v-model="reservation.firstName" type="text" id="firstName" required>
@@ -13,42 +23,19 @@
               <label for="lastName">Last Name:</label>
               <input v-model="reservation.lastName" type="text" id="lastName" required>
             </div>
-  
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input v-model="reservation.email" type="email" id="email" required>
-            </div>
-  
-            <div class="form-group">
-              <label for="userID">User ID:</label>
-              <input v-model="reservation.uicId" type="text" id="userID" required>
-            </div>
 
             <div class="form-group">
-              <label for="faculty-in-charge">Faculty In Charge:</label>
-              <input v-model="reservation.facultyIncharge" type="text" id="faculty-in-charge" required>
+              <label for="violation">Violation:</label>
+              <textarea v-model="reservation.violaton" id="violation" rows="4" required></textarea>
             </div>
   
-            <div class="form-group">
-              <label for="numberOfPeople">Number of People:</label>
-              <input v-model="reservation.numberOfPeople" type="text" id="numberOfPeople" required>
-            </div>
-  
-            <div class="form-group">
-              <label for="reservationDate">Reservation Date:</label>
-              <input v-model="reservation.reservationDate" type="date" id="reservationDate" required>
-            </div>
-  
-            <div class="form-group">
-              <label for="purpose">Purpose for Reservation:</label>
-              <textarea v-model="reservation.purpose" id="purpose" rows="4" required></textarea>
-            </div>
-  
+            <button type="submit">CANCEL</button>
             <button type="submit">SUBMIT</button>
           </form>
         </section>
       </main>
     </div>
+</div>
   </template>
   
   <script>
@@ -56,14 +43,10 @@
     data() {
       return {
         reservation: {
+          uicId: '',
           firstName: '',
           lastName: '',
-          email: '',
-          uicId: '',
-          facultyIncharge: '',
-          numberOfPeople: '',
-          reservationDate: '',
-          purpose: ''
+          violaton: '',
         }
       };
     },
@@ -132,6 +115,7 @@
       border-radius: 3px;
       cursor: pointer;
       float: right;
+      margin: 5px;
     }
   
     button:hover {

@@ -67,7 +67,7 @@
   }
   
   button {
-    background-color: #F68B9E;
+    background-color: #e62b4d;
     color: white;
     padding: 10px;
     border: none;
@@ -80,7 +80,7 @@
   }
   
   button:hover {
-    background-color: #e62b4d;
+    background-color: #F68B9E;
   }
 .forgotpass-heading {
     margin-top: auto;

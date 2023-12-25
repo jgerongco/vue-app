@@ -11,7 +11,9 @@
             any codes. If a code has not been received, kindly click the link to resend it.</p>
           <button type="submit">SUBMIT</button>
         </form>
+        <div class="text-heading">
         <router-link to="">Resend Code</router-link>
+      </div>
       </div>
     </div>
   </template>
@@ -43,12 +45,12 @@
   }
   
   .forgot-password-alt-container {
-    width: 450px;
-    padding: 30px;
+    width: 400px;
+    padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(217, 217, 217, 0.9);
   }
   
   form {
@@ -72,7 +74,7 @@
   }
   
   button {
-    background-color: #F68B9E;
+    background-color: #e62b4d;
     color: white;
     padding: 10px;
     border: none;
@@ -81,7 +83,7 @@
   }
   
   button:hover {
-    background-color: #e62b4d;
+    background-color: #F68B9E;
   }
   
   /* Add styles for the router link */
@@ -99,7 +101,7 @@
 }
 .text-heading{
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-align: center;
 }
   </style>

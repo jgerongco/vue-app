@@ -1,7 +1,7 @@
 
 <template>
   <div id="app">
-    <nav>
+    <!-- <nav>
       <div class="nav-container">
       <router-link to="/homepage">Home</router-link>
       <router-link to="/about">About</router-link>
@@ -10,7 +10,7 @@
       <router-link to="/profile">Account Details</router-link>
       <router-link to="/">Sign In</router-link>
       </div>
-    </nav>
+    </nav> -->
     <router-view/>
   </div>
 

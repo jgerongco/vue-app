@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="background-container">
+  <div id="hey" class="background-container">
     <div class="container">
       <div class="notification-header">
         <button @click="changeTab('all')" :class="{ 'active-tab': activeTab === 'all' }">All</button>
@@ -109,7 +109,7 @@ export default {
   border-radius: 8px;
 }
 
-#app {
+#hey {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   color: #000000;
@@ -122,7 +122,7 @@ export default {
 }
 
 button {
-  background-color: #F68B9E;
+  background-color: #e62b4d;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -132,20 +132,24 @@ button {
 }
 
 .active-tab {
-  background-color: #e62b4d;
+  background-color: #F68B9E;
 }
 
 .notification-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
+    width: 100%; /* You can adjust this value based on your preference */
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed; /* Add this line to ensure a fixed table layout */
+  }
 
-.notification-table th, .notification-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-}
+  .notification-table th, .notification-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    overflow: hidden; /* Add this line to handle overflow content */
+    white-space: nowrap; /* Add this line to prevent text wrapping */
+    text-overflow: ellipsis; /* Add this line to display an ellipsis for overflow content */
+  }
 
 .notification-table th {
   background-color: #F68B9E;
