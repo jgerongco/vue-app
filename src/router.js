@@ -14,7 +14,7 @@ import Report from './components/report.vue';
 import History from './components/history.vue';
 import Schedule from './components/schedule.vue';
 import AdminLogin from './components/adminLogin.vue';
-import AdminSignup from './components/AdminSignup.vue';
+import AdminSignup from './components/adminSignup.vue';
 import AdminHomePage from './components/adminHomePage.vue';
 import AdminProfile from './components/adminProfile.vue';
 
