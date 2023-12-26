@@ -8,19 +8,19 @@
         <div class="form-container">
         
         <form @submit.prevent="login" class="login-form">
-        <label for="studentID">Student ID:</label>
-        <input type="text" v-model="studentID" required />
+        <label for="email">Email:</label>
+        <input type="text" v-model="email" required />
           <v-text-field></v-text-field>
         <label for="password">Password:</label>
         <input type="password" v-model="password" required />
 
-        <router-link to="/homepage"><button type="button" class="btn btn-danger">LOGIN</button></router-link>
+        <router-link to="/adminHomePage"><button type="button" class="btn btn-danger">LOGIN</button></router-link>
         <div class="space"></div>
         <div class="forgot-password">
           <router-link to = "/forgotpassword">Forgot Password?</router-link>
         </div>
         <div class="signup-link">
-          <router-link to="/signup">Don't have an account? Sign up here</router-link> 
+          <router-link to="/adminSignup">Don't have an account? Sign up here</router-link> 
         </div>
         </form>
         </div>
@@ -32,7 +32,7 @@
   export default {
     data() {
       return {
-        username: '',
+        email: '',
         password: '',
       };
     },

@@ -3,7 +3,7 @@
     <div class="forgot-password-background">
       <div class="forgot-password-container">
         <h2 class="forgotpass-heading">Forgot Password?</h2>
-        <p class="text-heading">Enter your UIC email address to send a code to your phone number 
+        <p class="text-heading">Enter your email address to send a code to your phone number 
             and reset your password.</p>
         <form @submit.prevent="resetPassword">
           <label for="email">Email:</label>

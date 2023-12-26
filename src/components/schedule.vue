@@ -1,4 +1,19 @@
 <template>
+  <header>
+          <div class="logo">
+            <img src="./ICTDU.png" alt="Logo" class="logo-img"/>
+          </div>
+          <nav>
+            <ul>
+            <router-link to="/adminHomePage"><li><a href="#">Home</a></li></router-link>
+            <router-link to="/schedule"><li><a href="#">Schedule</a></li></router-link>
+            <router-link to="/history"><li><a href="#">History</a></li></router-link>
+            <router-link to="/report"><li><a href="#">Report</a></li></router-link>
+            <router-link to="/adminProfile"><li><a href="#">Account Details</a></li></router-link>
+            <router-link to="/"><li><a href="#">Logout</a></li></router-link>
+            </ul>
+          </nav>
+        </header>
     <div class="background">
     <div class="container">
       <div class="schedule-container">
@@ -183,23 +198,23 @@
   padding: 8px 12px;
   font-size: 14px;
   border: 1px solid #F68B9E;
-  background-color: #F68B9E;
+  background-color: #e62b4d;
   color: #fff;
   border-radius: 4px;
 }
 
 .accept-button {
-  background-color: #F68B9E;
+  background-color: #e62b4d;
   border: 1px solid #F68B9E;
 }
 
 .decline-button {
-  background-color: #F68B9E;
+  background-color: #e62b4d;
   border: 1px solid #F68B9E;
 }
 
 button:hover {
-  background-color: #e62b4d;
+  background-color: #F68B9E;
 }
 </style>
   

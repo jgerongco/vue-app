@@ -28,10 +28,11 @@
     </form>
     <router-link to = "/"><button type="submit">CANCEL</button></router-link>
       <router-link to = "/homepage"><button type="submit">SIGN UP</button></router-link>
-    <div class="signup-link">
-          <router-link to="./">Already have an account? <a href="./">Login here</a></router-link> 
-        </div>
-        
+      <div class="signup-link">
+    <router-link to="/login">
+      <a href="/login" class="login-link">Already have an account? Login here</a>
+    </router-link>
+  </div>
   </div>
 </div>
 </template>
@@ -116,7 +117,6 @@ button:hover {
 {
   text-align: center;
   margin-top: 50px;
-  
 }
 
 </style>

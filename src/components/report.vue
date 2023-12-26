@@ -1,6 +1,19 @@
-<!-- ReservationForm.vue -->
-
 <template>
+  <header>
+          <div class="logo">
+            <img src="./ICTDU.png" alt="Logo" class="logo-img"/>
+          </div>
+          <nav>
+            <ul>
+            <router-link to="/adminHomePage"><li><a href="#">Home</a></li></router-link>
+            <router-link to="/schedule"><li><a href="#">Schedule</a></li></router-link>
+            <router-link to="/history"><li><a href="#">History</a></li></router-link>
+            <router-link to="/report"><li><a href="#">Report</a></li></router-link>
+            <router-link to="/adminProfile"><li><a href="#">Account Details</a></li></router-link>
+            <router-link to="/"><li><a href="#">Logout</a></li></router-link>
+            </ul>
+          </nav>
+        </header>
     <div class="background">
     <div>
   
@@ -29,7 +42,7 @@
               <textarea v-model="reservation.violaton" id="violation" rows="4" required></textarea>
             </div>
   
-            <button type="submit">CANCEL</button>
+            <router-link to ="/adminHomePage"><button type="submit">CANCEL</button></router-link>
             <button type="submit">SUBMIT</button>
           </form>
         </section>
