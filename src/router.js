@@ -13,7 +13,6 @@ import Notification from './components/notification.vue';
 import Report from './components/report.vue';
 import History from './components/history.vue';
 import Schedule from './components/schedule.vue';
-
 import AdminLogin from './components/adminLogin.vue';
 import AdminSignup from './components/AdminSignup.vue';
 import AdminHomePage from './components/adminHomePage.vue';
@@ -33,7 +32,6 @@ const routes = [
       { path: "/report", component: Report },
       { path: "/history", component: History },
       { path: "/schedule", component: Schedule },
-
       { path: "/adminLogin", component: AdminLogin },
       { path: "/adminSignup", component: AdminSignup },
       { path: "/adminHomePage", component: AdminHomePage },
