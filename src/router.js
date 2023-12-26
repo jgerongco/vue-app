@@ -17,6 +17,7 @@ import AdminLogin from './components/adminLogin.vue';
 import AdminSignup from './components/adminSignup.vue';
 import AdminHomePage from './components/adminHomePage.vue';
 import AdminProfile from './components/adminProfile.vue';
+import AdminNotification from './components/adminNotification.vue';
 
 const routes = [
       { path: "/", component: UserType },
@@ -36,6 +37,7 @@ const routes = [
       { path: "/adminSignup", component: AdminSignup },
       { path: "/adminHomePage", component: AdminHomePage },
       { path: "/adminProfile", component: AdminProfile },
+      { path: "/adminNotification", component: AdminNotification },
     ];
 const router = createRouter({
   history: createWebHistory(),

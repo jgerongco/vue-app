@@ -5,11 +5,12 @@
           </div>
           <nav>
             <ul>
-            <router-link to="/adminHomePage"><li><a href="#">Home</a></li></router-link>
+                <router-link to="/adminHomePage"><li><a href="#">Home</a></li></router-link>
             <router-link to="/schedule"><li><a href="#">Schedule</a></li></router-link>
             <router-link to="/history"><li><a href="#">History</a></li></router-link>
             <router-link to="/report"><li><a href="#">Report</a></li></router-link>
             <router-link to="/adminProfile"><li><a href="#">Account Details</a></li></router-link>
+            <router-link to="/notification"><li><a href="#">Notifications</a></li></router-link>
             <router-link to="/"><li><a href="#">Logout</a></li></router-link>
             </ul>
           </nav>
@@ -85,7 +86,7 @@
         user: {
           name: "Jan Kurt",
           email: "jankurt@gmail.com",
-          studentId: "1",
+          studentId: "001",
           position: "Admin",
           mobileNumber: "09632396273",
           birthday: "2000-01-23",

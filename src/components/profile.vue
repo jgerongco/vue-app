@@ -83,9 +83,9 @@ export default {
       user: {
         name: "John Doe",
         email: "john.doe@example.com",
-        studentId: "123456",
+        studentId: "123",
         position: "Student",
-        mobileNumber: "123-456-7890",
+        mobileNumber: "09465223848",
         birthday: "1990-01-01",
         age: "32",
         profilePicture: "https://via.placeholder.com/150",

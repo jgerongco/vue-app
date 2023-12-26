@@ -24,10 +24,13 @@
   
         <label for="confirmPassword">Confirm Password:</label>
         <input type="password" v-model="confirmPassword" required />
-  
+
+        <button type="button" @click="addUser">SIGN UP</button>
       </form>
+      <div v-if="registrationSuccess" class="success-message">
+        Successfully Registered!
+      </div>
       <router-link to = "/adminLogin"><button type="submit">CANCEL</button></router-link>
-        <router-link to = "/adminHomeage"><button type="submit">SIGN UP</button></router-link>
       <div class="signup-link">
             <router-link to="/adminLogin">Already have an account? <a href="/adminLogin">Login here</a></router-link> 
           </div>
@@ -47,14 +50,27 @@
        email: '',
        password: '',
        confirmPassword: '',
+       registrationSuccess: false,
+       registeredUsers: [], // Array to store registered users
       };
     },
     methods: {
       signup() {
-        // Add signup logic here
-        console.log('Signing up with:', this.StudentID, this.FirstName, this.LastName, this.username, this.email, this.password);
-        // Replace the console.log with your signup logic
-      },
+        this.registeredUsers.push({
+        StudentID: this.StudentID,
+        FirstName: this.FirstName,
+        LastName: this.LastName,
+        username: this.username,
+        email: this.email,
+        password: this.password,
+      });
+      this.registrationSuccess = true;
+      const inputDataString = `StudentID: '${this.StudentID}', FirstName: '${this.FirstName}', LastName: '${this.LastName}', username: '${this.username}', email: '${this.email}', password: '${this.password}'`;
+      console.log('Signing up with:', inputDataString);
+
+      // Optional: Log all registered users
+      console.log('Registered Users:', this.registeredUsers);
+    },
     },
   };
   </script>
