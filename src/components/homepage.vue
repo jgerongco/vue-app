@@ -16,11 +16,7 @@
       </header>
 
       <main>
-        <h1>Welcome to ICTDU Space</h1>
-        <div>
-          <!-- Details for ICTDU Space -->
-          <p>Place your details for ICTDU Space here.</p>
-        </div>
+        <h1 class="h1">Welcome to ICTDU Space, User!</h1>
       </main>
     </div>
   </template>
@@ -74,9 +70,10 @@
   main {
     padding: 5rem;
   }
-  h1{
+  .h1{
     color: white;
     text-align: center;
+    margin-bottom: 30px;
+    font-size: 90px;
   }
- 
   </style>

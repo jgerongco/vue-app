@@ -10,19 +10,15 @@
             <router-link to="/schedule"><li><a href="#">Schedule</a></li></router-link>
             <router-link to="/history"><li><a href="#">History</a></li></router-link>
             <router-link to="/report"><li><a href="#">Report</a></li></router-link>
+            <router-link to="/adminRoom"><li><a href="#">Room Availability</a></li></router-link>
             <router-link to="/adminProfile"><li><a href="#">Account Details</a></li></router-link>
-            <router-link to="/adminNotification"><li><a href="#">Notifications</a></li></router-link>
             <router-link to="/"><li><a href="#">Logout</a></li></router-link>
           </ul>
         </nav>
       </header>
 
       <main>
-        <h1>Welcome to ICTDU Space</h1>
-        <div>
-          <!-- Details for ICTDU Space -->
-          <p>Place your details for ICTDU Space here.</p>
-        </div>
+        <h1 class="h1">Welcome to ICTDU Space, Admin!</h1>
       </main>
     </div>
   </template>
@@ -76,9 +72,10 @@
   main {
     padding: 5rem;
   }
-  h1{
+  .h1{
     color: white;
     text-align: center;
+    margin-bottom: 30px;
+    font-size: 90px;
   }
- 
   </style>
