@@ -7,7 +7,7 @@
         <nav>
           <ul>
             <router-link to="/homepage"><li><a href="#">Home</a></li></router-link>
-            <router-link to="/reservationform"><li><a href="#">Reservation</a></li></router-link>
+            <router-link to="/room"><li><a href="#">Reservation</a></li></router-link>
             <router-link to="/profile"><li><a href="#">Account Details</a></li></router-link>
             <router-link to="/notification"><li><a href="#">Notifications</a></li></router-link>
             <router-link to="/"><li><a href="#">Logout</a></li></router-link>
