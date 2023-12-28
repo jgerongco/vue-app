@@ -89,7 +89,7 @@
         // Handle form submission logic here
         console.log('Form submitted:', this.reservation);
         // You can send the data to the server or perform any other necessary actions
-        this.submissionMessage = 'The Report has been submitted';
+        this.submissionMessage = 'The Reservation has been submitted';
       }
     }
   };
