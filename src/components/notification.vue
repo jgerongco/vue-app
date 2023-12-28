@@ -84,11 +84,25 @@ export default {
     return {
       activeTab: 'all',
       notifications: [
-        { id: 1, text: 'Notification 1', type: 'all' },
-        { id: 2, text: 'Notification 2', type: 'updates' },
-        { id: 3, text: 'Notification 3', type: 'trash' },
+        { id: 1, text: 'Your Reservation has been accepted.', type: 'all' },
+        { id: 2, text: 'Your Reservation has been accepted.', type: 'updates' },
+        { id: 3, text: 'Your Reservation has been accepted.', type: 'trash' },
         // Add more notifications as needed
       ],
+      // activeTab: 'updates',
+      // notifications: [
+      //   { id: 1, text: 'Your Reservation has been accepted.', type: 'updates' },
+      //   { id: 2, text: 'Notification 2', type: 'updates' },
+      //   { id: 3, text: 'Notification 3', type: 'updates' },
+      //   // Add more notifications as needed
+      // ],
+      // activeTab: 'trash',
+      // notifications: [
+      //   { id: 1, text: 'Your Reservation has been accepted.', type: 'trash' },
+      //   { id: 2, text: 'Notification 2', type: 'trash' },
+      //   { id: 3, text: 'Notification 3', type: 'trash' },
+      //   // Add more notifications as needed
+      // ],
     };
   },
   computed: {
@@ -161,7 +175,7 @@ button {
     padding: 8px;
     text-align: center;
     overflow: hidden; /* Add this line to handle overflow content */
-    white-space: nowrap; /* Add this line to prevent text wrapping */
+    /* white-space: nowrap; Add this line to prevent text wrapping */
     text-overflow: ellipsis; /* Add this line to display an ellipsis for overflow content */
   }
 

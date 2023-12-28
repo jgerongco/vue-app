@@ -57,9 +57,11 @@
               <label for="purpose">Purpose for Reservation:</label>
               <textarea v-model="reservation.purpose" id="purpose" rows="4" required></textarea>
             </div>
-  
+            
+            <router-link to ="/homepage"><button type="submit">CANCEL</button></router-link>
             <button type="submit">SUBMIT</button>
           </form>
+          <p v-if="submissionMessage" class="submission-message">{{ submissionMessage }}</p>
         </section>
       </main>
     </div>
@@ -78,7 +80,8 @@
           numberOfPeople: '',
           reservationDate: '',
           purpose: ''
-        }
+        },
+        submissionMessage: '',
       };
     },
     methods: {
@@ -86,6 +89,7 @@
         // Handle form submission logic here
         console.log('Form submitted:', this.reservation);
         // You can send the data to the server or perform any other necessary actions
+        this.submissionMessage = 'The Report has been submitted';
       }
     }
   };
@@ -146,6 +150,7 @@
       border-radius: 3px;
       cursor: pointer;
       float: right;
+      margin-left: 10px;
     }
   
     button:hover {

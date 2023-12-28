@@ -46,6 +46,7 @@
             <router-link to ="/adminHomePage"><button type="submit">CANCEL</button></router-link>
             <button type="submit">SUBMIT</button>
           </form>
+          <p v-if="submissionMessage" class="submission-message">{{ submissionMessage }}</p>
         </section>
       </main>
     </div>
@@ -61,7 +62,8 @@
           firstName: '',
           lastName: '',
           violaton: '',
-        }
+        },
+        submissionMessage: '',
       };
     },
     methods: {
@@ -69,6 +71,8 @@
         // Handle form submission logic here
         console.log('Form submitted:', this.reservation);
         // You can send the data to the server or perform any other necessary actions
+
+        this.submissionMessage = 'The Report has been submitted';
       }
     }
   };
